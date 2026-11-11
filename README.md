@@ -22,11 +22,11 @@ The server runs on http://localhost:5000.
 
 ## Status
 
-- [x] Backend is working and tested with curl.
+- [x] Backend is deployed and live on Render.
 
-- [x] Data persists to database.json.
+- [x] Frontend is connected and communicating with the API.
 
-- [ ] Not yet connected to the frontend. See NOTES.md.
+- [ ] Clear Trophy Case is currently frontend-only (needs a backend endpoint).
 
 ## Roadmap
 
