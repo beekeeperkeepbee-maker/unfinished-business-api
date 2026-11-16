@@ -26,7 +26,7 @@ The server runs on http://localhost:5000.
 
 - [x] Frontend is connected and communicating with the API.
 
-- [ ] Clear Trophy Case is currently frontend-only (needs a backend endpoint).
+- [x] Keep-alive monitor (UptimeRobot) prevents free-tier cold starts and data loss.
 
 ## Roadmap
 
