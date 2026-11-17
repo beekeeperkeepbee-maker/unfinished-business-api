@@ -72,6 +72,10 @@ def delete_project(index):
     removed_name = data["unfinished"].pop(index)
     save_data(data)
     return jsonify({"message": f"Deleted '{removed_name}'", "data": data})
+    
+@app.route("/health")
+def health():
+    return {"status": "ok"}, 200
 
 # --- Run the server ---
 
