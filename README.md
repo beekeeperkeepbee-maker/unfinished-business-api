@@ -23,13 +23,24 @@ The server runs on http://localhost:5000.
 ## Status
 
 - [x] Backend is deployed and live on Render.
-
 - [x] Frontend is connected and communicating with the API.
-
-- [x] Keep-alive monitor (UptimeRobot) prevents free-tier cold starts and data loss.
+- [x] Connected to a **Supabase PostgreSQL database** for permanent storage.
+- [x] Keep-alive monitor (UptimeRobot) prevents free-tier cold starts.
 
 ## Roadmap
 
 - [x] Version 1.0 — Flask server with CRUD endpoints
-- [ ] Version 1.1 — Deploy to a public host (Render/Railway/Fly.io)
-- [ ] Version 1.2 — Connect the web frontend to the API
+- [x] Version 1.1 — Deploy to a public host (Render)
+- [x] Version 1.2 — Connect the web frontend to the API
+- [x] Version 1.3 — Migrate local JSON storage to Supabase PostgreSQL database
+
+## Database
+
+This API uses a Supabase PostgreSQL database. The `DATABASE_URL` environment variable on Render holds the connection string. The database table is created with the following schema:
+
+```sql
+create table projects (
+  id bigint primary key generated always as identity,
+  name text not null,
+  status text not null default 'unfinished'
+);
